@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Termos e Política de Privacidade | Edilson JS</title>
+
+    <style>
+        /* ═══════════════════════════════════════════
+           RESET & BASE
+           ═══════════════════════════════════════════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b1a2e;
+            color: #e0e8f0;
+            line-height: 1.7;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ═══════════════════════════════════════════
+           HEADER SIMPLES (para voltares ao portfólio)
+           ═══════════════════════════════════════════ */
+        header {
+            background: rgba(10, 30, 60, 0.95);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            background: linear-gradient(135deg, #4a8cff, #0077be);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 14px rgba(74, 140, 255, 0.35);
+        }
+
+        .btn-voltar:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(74, 140, 255, 0.5);
+        }
+
+        /* ═══════════════════════════════════════════
+           CONTEÚDO
+           ═══════════════════════════════════════════ */
+        main {
+            padding: 60px 20px 80px;
+        }
+
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #b0d0ff;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #8a9aaa;
+            margin-bottom: 50px;
+        }
+
+        .indice {
+            background: #12263a;
+            padding: 24px 28px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            border-left: 4px solid #4a8cff;
+        }
+
+        .indice h3 {
+            color: #b0d0ff;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .indice ul li {
+            margin-bottom: 6px;
+        }
+
+        .indice ul li a {
+            color: #c8d8e8;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .indice ul li a:hover {
+            color: #6aaaff;
+            padding-left: 6px;
+        }
+
+        /* Bloco de cada documento */
+        .documento {
+            background: #0f1f33;
+            padding: 40px 36px;
+            border-radius: 24px;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .documento h2 {
+            font-size: 28px;
+            color: #b0d0ff;
+            margin-bottom: 8px;
+            padding-bottom: 14px;
+            border-bottom: 3px solid #4a8cff;
+        }
+
+        .documento .atualizado {
+            font-size: 14px;
+            color: #8a9aaa;
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+
+        .documento h3 {
+            font-size: 20px;
+            color: #6aaaff;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        .documento p {
+            font-size: 16px;
+            color: #c8d8e8;
+            margin-bottom: 14px;
+        }
+
+        .documento ul,
+        .documento ol {
+            margin-left: 22px;
+            margin-bottom: 16px;
+        }
+
+        .documento ul li {
+            list-style: disc;
+            color: #c8d8e8;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .documento ol li {
+            list-style: decimal;
+            color: #c8d8e8;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .documento a {
+            color: #6aaaff;
+            transition: 0.3s;
+        }
+
+        .documento a:hover {
+            color: #b0d0ff;
+            text-decoration: underline;
+        }
+
+        .documento strong {
+            color: #b0d0ff;
+        }
+
+        .aviso {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid #ff6b6b;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 15px;
+            color: #ffc8c8;
+        }
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════ */
+        footer {
+            background: #071222;
+            color: #8a9aaa;
+            padding: 30px 20px 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #6aaaff;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #b0d0ff;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            header { padding: 0 16px; }
+            .header { height: 62px; }
+            .logo a { font-size: 20px; }
+            .btn-voltar { padding: 8px 18px; font-size: 13px; }
+
+            main { padding: 40px 16px 60px; }
+            .page-title { font-size: 26px; }
+            .documento { padding: 26px 20px; }
+            .documento h2 { font-size: 22px; }
+            .documento h3 { font-size: 17px; }
+            .documento p,
+            .documento ul li,
+            .documento ol li { font-size: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .logo a { font-size: 17px; }
+            .btn-voltar { padding: 6px 14px; font-size: 12px; }
+            .page-title { font-size: 22px; }
+            .page-subtitle { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">Edilson JS</a>
+            </div>
+            <a href="index.html" class="btn-voltar">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar ao Portfólio
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1 class="page-title">Informação Legal</h1>
+        <p class="page-subtitle">Termos e Condições de Uso e Política de Privacidade</p>
+
+        <!-- ═══ ÍNDICE ═══ -->
+        <div class="indice">
+            <h3><i class="fas fa-list" aria-hidden="true"></i> Índice</h3>
+            <ul>
+                <li><a href="#termos">1. Termos e Condições de Uso</a></li>
+                <li><a href="#privacidade">2. Política de Privacidade e Proteção de Dados</a></li>
+                <li><a href="#contacto-legal">3. Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════════════════════════════════
+             TERMOS E CONDIÇÕES
+             ═══════════════════════════════════════════ -->
+        <section class="documento" id="termos">
+            <h2>1. Termos e Condições de Uso</h2>
+            <p class="atualizado">Última atualização: 15 de setembro de 2026</p>
+
+            <h3>1.1. Identificação</h3>
+            <p>
+                Este site é um portfólio pessoal de <strong>Edilson Jorge Silombe</strong>,
+                o “titular do site”.
+            </p>
+
+            <h3>1.2. Objeto</h3>
+            <p>
+                O site serve para apresentar os meus projetos, habilidades e formas de
+                contacto profissional.
+            </p>
+
+            <h3>1.3. Aceitação</h3>
+            <p>
+                Ao navegar neste site e/ou ao enviar uma mensagem através dos canais
+                disponíveis (formulário, email, WhatsApp ou telefone), o utilizador
+                declara que leu, compreendeu e aceita estes Termos e a Política de
+                Privacidade.
+            </p>
+
+            <h3>1.4. Canais de contacto</h3>
+            <p>O utilizador pode contactar-me por:</p>
+            <ul>
+                <li>Formulário no site;</li>
+                <li>Email;</li>
+                <li>WhatsApp;</li>
+                <li>Telefone.</li>
+            </ul>
+            <p>
+                Ao utilizar estes canais, o utilizador fornece voluntariamente dados
+                como <strong>nome, email, número de telefone e conteúdo da mensagem</strong>.
+            </p>
+
+            <h3>1.5. Uso permitido</h3>
+            <p>O utilizador compromete-se a não enviar:</p>
+            <ul>
+                <li>Conteúdo ilegal, ofensivo, difamatório ou discriminatório;</li>
+                <li>Spam, publicidade não solicitada ou correntes;</li>
+                <li>Vírus, malware ou ficheiros prejudiciais.</li>
+            </ul>
+            <p>
+                Reservo-me o direito de ignorar ou eliminar mensagens que violem estes
+                termos.
+            </p>
+
+            <h3>1.6. Propriedade intelectual</h3>
+            <p>
+                Todo o conteúdo do site (textos, imagens, código, design) pertence-me.
+            </p>
+
+            <h3>1.7. Links para terceiros</h3>
+            <p>
+                O site pode conter links para plataformas externas (GitHub, WhatsApp,
+                Google Sites, etc.). Não sou responsável pelas práticas de privacidade
+                ou conteúdos desses sites.
+            </p>
+
+            <h3>1.8. Alterações</h3>
+            <p>
+                Posso alterar estes Termos a qualquer momento. A versão mais recente
+                estará sempre publicada nesta página.
+            </p>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             POLÍTICA DE PRIVACIDADE
+             ═══════════════════════════════════════════ -->
+        <section class="documento" id="privacidade">
+            <h2>2. Política de Privacidade e Proteção de Dados</h2>
+            <p class="atualizado">Última atualização: 15 de setembro de 2026</p>
+
+            <h3>2.1. Responsável pelo tratamento</h3>
+            <p>
+                O responsável pelos dados recolhidos é <strong>Edilson Jorge Silombe</strong>.
+            </p>
+
+            <h3>2.2. Que dados recolho</h3>
+            <p>Quando alguém me contacta, posso receber e guardar:</p>
+            <ul>
+                <li><strong>Nome</strong> (ou nome de perfil no WhatsApp);</li>
+                <li><strong>Email</strong>;</li>
+                <li><strong>Número de telefone</strong>;</li>
+                <li><strong>Conteúdo da mensagem</strong>;</li>
+                <li><strong>Data e hora</strong> do contacto.</li>
+            </ul>
+            <p>
+                No caso do WhatsApp, a plataforma <strong>Meta/WhatsApp</strong> também
+                trata dados conforme as políticas próprias dela. Não controlo esses
+                dados.
+            </p>
+
+            <h3>2.3. Para que uso os dados</h3>
+            <p>Uso os dados <strong>apenas para</strong>:</p>
+            <ul>
+                <li>Responder a mensagens, dúvidas ou pedidos;</li>
+                <li>Manter um histórico profissional dos contactos;</li>
+                <li>Eventualmente, enviar informações que o utilizador tenha pedido.</li>
+            </ul>
+            <p>
+                <strong>Não vendo, não alugo e não partilho</strong> os teus dados com
+                terceiros para marketing.
+            </p>
+
+            <h3>2.4. Base legal</h3>
+            <p>O tratamento baseia-se no:</p>
+            <ul>
+                <li><strong>Consentimento</strong> do utilizador, ao enviar a mensagem;</li>
+                <li><strong>Interesse legítimo</strong> em responder e manter contacto profissional;</li>
+                <li><strong>Cumprimento de obrigações legais</strong>, se aplicável.</li>
+            </ul>
+
+            <h3>2.5. Partilha com terceiros</h3>
+            <p>
+                Os dados podem passar por serviços de terceiros que utilizo para
+                comunicar:
+            </p>
+            <ul>
+                <li><strong>WhatsApp / Meta</strong></li>
+                <li><strong>Fornecedor de email</strong></li>
+                <li><strong>GitHub Pages</strong></li>
+            </ul>
+            <p>
+                Esses serviços têm as suas próprias políticas. Recomendo que as consultes.
+            </p>
+
+            <h3>2.6. Durante quanto tempo guardo</h3>
+            <p>
+                Guardo os dados apenas pelo tempo necessário para responder e manter um
+                histórico profissional. Salvo obrigação legal em contrário, elimino os
+                dados após <strong>12 meses</strong> do último contacto.
+            </p>
+
+            <h3>2.7. Direitos do utilizador</h3>
+            <p>O utilizador pode, a qualquer momento, pedir:</p>
+            <ul>
+                <li><strong>Acesso</strong> aos dados que tenho sobre ele;</li>
+                <li><strong>Correção</strong> de dados errados;</li>
+                <li><strong>Eliminação</strong> dos dados;</li>
+                <li><strong>Oposição</strong> ao tratamento;</li>
+                <li><strong>Retirada do consentimento</strong>.</li>
+            </ul>
+            <p>
+                Para exercer estes direitos, basta enviar email para
+                <a href="mailto:edilsonsilombe10@email.com">edilsonsilombe10@email.com</a>.
+                Responderei no prazo máximo de <strong>30 dias</strong>.
+            </p>
+
+            <h3>2.8. Segurança</h3>
+            <p>
+                Adoto medidas razoáveis para proteger os dados (palavra-passe no email,
+                autenticação em dois passos, etc.). No entanto, nenhum sistema é 100%
+                seguro. Não posso garantir segurança absoluta.
+            </p>
+
+            <h3>2.9. Cookies</h3>
+            <p>
+                Este site não usa cookies de rastreamento. Se vier a usar, esta política
+                será atualizada.
+            </p>
+
+            <h3>2.10. Menores</h3>
+            <p>
+                Não recolho intencionalmente dados de menores de <strong>16 anos</strong>.
+                Se um menor me contactar, os dados serão eliminados assim que possível.
+            </p>
+
+            <h3>2.11. Alterações</h3>
+            <p>
+                Posso atualizar esta Política. A data no topo indica a última alteração.
+            </p>
+
+            <div class="aviso">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                <strong>Nota:</strong> este documento é um modelo informativo e não
+                constitui aconselhamento jurídico. Para situações específicas, consulta
+                um profissional de direito.
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             CONTACTO
+             ═══════════════════════════════════════════ -->
+        <section class="documento" id="contacto-legal">
+            <h2>3. Contacto</h2>
+            <p>Para qualquer questão sobre estes Termos ou sobre privacidade:</p>
+            <ul>
+                <li>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <strong>Email:</strong>
+                    <a href="mailto:edilsonsilombe10@email.com">edilsonsilombe10@email.com</a>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/258878135353" target="_blank" rel="noopener noreferrer">
+                        +258 87 813 5353
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <strong>Telefone:</strong>
+                    <a href="tel:+258878135353">+258 87 813 5353</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <p>
+            &copy; <span id="ano"></span> Edilson Jorge Silombe.
+            <a href="index.html">Voltar ao Portfólio</a>
+        </p>
+    </footer>
+
+    <!-- ═══ SCRIPT ═══ -->
+    <script>
+        // Ano dinâmico no footer
+        document.getElementById('ano').textContent = new Date().getFullYear();
+
+        // Scroll suave para os links do índice (garantia extra)
+        document.querySelectorAll('.indice a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const alvo = document.querySelector(this.getAttribute('href'));
+                if (alvo) {
+                    e.preventDefault();
+                    alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
