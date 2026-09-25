@@ -542,59 +542,72 @@
         .footer-bottom p a {
             color: #6a7a8a;
         }
+@media (max-width: 950px) {
 
-        @media (max-width: 950px) {
-            .header {
-                height: 100px;
-            }
+    /* ===== HEADER ===== */
+    .header {
+        display: flex;
+        flex-direction: column;   /* logo em cima, links em baixo */
+        align-items: center;      /* centraliza tudo */
+        justify-content: center;
+        gap: 10px;
+        height: auto;             /* não fixa 100px, deixa crescer */
+        padding: 15px 10px;
+    }
 
-            .nav-links {
-                display: block;
-            }
+    /* ===== NAV LINKS ===== */
+    .nav-links {
+        display: block;
+        text-align: center;
+        margin: 0;                /* remove os 35px que bagunçam */
+        width: 100%;
+    }
 
-            .btn-gradient {
-                display: none;
-            }
+    .nav-links ul {
+        display: flex;
+        flex-wrap: wrap;          /* quebra linha se faltar espaço */
+        justify-content: center;
+        gap: 8px;                 /* espaçamento entre links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 
-            .nav-links {
-                position: fixed;
-                z-index: 100;
-                margin: 0 270px;
-            }
+    .nav-links li a {
+        font-size: 16px;          /* legível em tablet */
+        padding: 6px 12px;
+        display: inline-block;
+    }
 
-            .nav-links ul {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
+    /* Esconde o botão gradient no tablet/mobile */
+    .btn-gradient {
+        display: none;
+    }
 
-            ul li {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+    /* ===== PROJETOS ===== */
+    .projectos-grid {
+        gap: 20px;
+    }
 
-            }
+    .projecto {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 400px;
+    }
 
-            ul li a {
-                font-size: 24px;
-            }
+    /* ===== CONTACTOS ===== */
+    .contactos ul li {
+        align-items: flex-start;
+    }
 
-            .projectos-grid {
-                gap: 20px;
-            }
-
-            .projecto {
-                flex: 0 1 calc(50% - 20px);
-                max-width: 400px;
-            }
-
-            .contactos ul li {
-                align-items: flex-start;
-            }
-
-            .habil-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    /* ===== HABILIDADES ===== */
+    .habil-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
 
         @media (max-width: 768px) {
 
@@ -615,6 +628,7 @@
                 font-size: 15px;
                 padding: 6px 12px;
             }
+
 
             .btn-gradient {
                 padding: 6px 18px;
